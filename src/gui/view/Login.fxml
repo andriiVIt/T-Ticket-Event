@@ -25,14 +25,14 @@
                   <Image url="@images/logo.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="148.0" layoutY="210.0">
-               <image>
-                  <Image url="@../../../../Cinematrix3/src/dk/easv/presentation/view/images/userLog.png" />
-               </image>
-            </ImageView>
             <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="148.0" layoutY="252.0">
                <image>
                   <Image url="@images/lockIconLog.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="148.0" layoutY="214.0">
+               <image>
+                  <Image url="@images/userLog.png" />
                </image>
             </ImageView>
          </children>

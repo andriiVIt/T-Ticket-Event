@@ -5,8 +5,6 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 import java.sql.Connection;
 
 
-
-
 public class ConnectionManager {
     private final SQLServerDataSource ds;
 

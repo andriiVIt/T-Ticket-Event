@@ -2,10 +2,9 @@ package BE;
 
 import java.util.UUID;
 
-public class Ticket {
-    private UUID uuid;
+public class Ticket {private UUID uuid;
     private Event event;
-    public Customer customer;
+    private Customer customer;
     private String ticketType;
 
     public Ticket(String ticketType, Event event, Customer customer) {

@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="231.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.view.Ticket">
+<AnchorPane prefHeight="231.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.view.Ticket">
    <children>
       <ImageView fitHeight="307.0" fitWidth="658.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/bg.jpg" />
          </image></ImageView>
-      <ImageView fitHeight="38.0" fitWidth="270.0" layoutX="98.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/logo.jpg" />
-         </image>
-      </ImageView>
       <AnchorPane layoutX="48.0" layoutY="133.0" prefHeight="173.0" prefWidth="370.0">
          <children>
             <Label layoutX="22.0" layoutY="14.0" prefHeight="31.0" prefWidth="103.0" text="Event Day" textAlignment="CENTER" textFill="WHITE">
@@ -61,5 +57,10 @@
             <Font name="Calibri Bold" size="14.0" />
          </font>
       </Label>
+      <ImageView fitHeight="30.0" fitWidth="270.0" layoutX="14.0" layoutY="22.0">
+         <image>
+            <Image url="@images/logo-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -1,14 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="gui.controller.CoordinatorController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MFXScrollPane prefHeight="607.0" prefWidth="900.0" style="-fx-background-color: #1B6070;">
+         <content>
+            <VBox prefHeight="604.0" prefWidth="898.0">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="375.0">
+                     <image>
+                        <Image url="@images/logo-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="898.0" spacing="5.0">
+                     <children>
+                        <MFXButton prefHeight="26.0" prefWidth="271.0" style="-fx-background-color: #007BFF;" text="Create coordinator" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Wingdings 2" size="13.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXButton prefHeight="26.0" prefWidth="271.0" style="-fx-background-color: #007BFF;" text="See all events" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Skia" size="13.0" />
+                           </font>
+                        </MFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </MFXScrollPane>
+      <GridPane fx:id="gridPane" layoutX="10.0" layoutY="85.0" prefHeight="512.0" prefWidth="884.0" style="-fx-background-color: transparent;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Pane>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Pane>
+         </children>
+      </GridPane>
+      <HBox layoutY="576.0" prefHeight="24.0" prefWidth="900.0" spacing="3.0">
+         <children>
+            <MFXButton prefHeight="27.0" prefWidth="20.0" style="-fx-background-color: #007BFF;" text=" ">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@images/img.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MFXButton>
+            <MFXButton alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="20.0" style="-fx-background-color: #007BFF;" text=" ">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@images/img2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MFXButton>
+         </children>
+         <padding>
+            <Insets left="400.0" />
+         </padding>
+      </HBox>
+   </children>
 </AnchorPane>

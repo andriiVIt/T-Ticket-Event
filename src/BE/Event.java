@@ -1,8 +1,6 @@
 package BE;
 
 import java.time.LocalDate;
-import java.util.Arrays;
-
 
 public class Event {
 
@@ -11,19 +9,24 @@ public class Event {
     private String location;
     private LocalDate date;
     private double time;
-
+    private String note;
+    private byte[] imageData;
 
     public Event(String name, String location, LocalDate date, double time, String note, byte[] imageData) {
         this.name = name;
         this.location = location;
         this.date = date;
         this.time = time;
+        this.note = note;
+        this.imageData = imageData;
     }
 
     public Event(int id, String name, String location, LocalDate date, double time, String note, byte[] imageData){
         this(name, location, date, time, note, imageData);
         this.id = id;
     }
+
+
 
     public int getId() {
         return id;
@@ -63,6 +66,22 @@ public class Event {
 
     public void setTime(float time) {
         this.time = time;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public byte[] getImageData() {
+        return imageData;
+    }
+
+    public void setImageData(byte[] imageData) {
+        this.imageData = imageData;
     }
 
     @Override

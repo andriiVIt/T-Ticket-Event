@@ -71,19 +71,41 @@ public class EventDao {private ConnectionManager connectionManager;
     }
 
     public void assignEventCoordinator(Event event, Coordinator coordinator) throws SQLException {
-        try (Connection con = connectionManager.getConnection()) {
+        Connection con = null;
+        try {
+            con = connectionManager.getConnection();
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-            PreparedStatement pst = con.prepareStatement("INSERT INTO EventCoordinator(eventid, coordinatorid) VALUES(?, ?)", Statement.RETURN_GENERATED_KEYS);
-            pst.setInt(1, event.getId());
-            pst.setInt(2, coordinator.getId());
-            pst.executeUpdate();
-            con.commit();
-        } catch (SQLException e) {
-            try (Connection con = connectionManager.getConnection()) {
-                con.rollback();
+
+            try (PreparedStatement pst = con.prepareStatement("INSERT INTO EventCoordinator(eventid, coordinatorid) VALUES(?, ?)", Statement.RETURN_GENERATED_KEYS)) {
+                pst.setInt(1, event.getId());
+                pst.setInt(2, coordinator.getId());
+                pst.executeUpdate();
+
+                con.commit();
+            } catch (SQLException e) {
+
+                e.printStackTrace();
+
+                if (con != null) {
+                    try {
+                        con.rollback();
+                    } catch (SQLException ex) {
+
+                        ex.printStackTrace();
+                    }
+                }
+                throw e;
             }
-            throw e;
+        } finally {
+
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
         }
     }
 

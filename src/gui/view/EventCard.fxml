@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -12,10 +12,10 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="350.0"   xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.EventCardController">
+<Pane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="350.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.EventCardController">
    <children>
       <ImageView fx:id="eventImage" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="eventTitle" layoutX="130.0" layoutY="4.0" prefHeight="30.0" prefWidth="200.0" text="Empty event">
+      <Label fx:id="eventTitle" layoutX="130.0" layoutY="4.0" prefHeight="30.0" prefWidth="200.0" text="Empty event" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -29,7 +29,7 @@
                         <Image url="@images/clock_icon.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="timeNumber" alignment="TOP_LEFT" prefHeight="17.0" prefWidth="50.0" text="0">
+                  <Label fx:id="timeNumber" alignment="TOP_LEFT" prefHeight="17.0" prefWidth="50.0" text="0" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -46,7 +46,7 @@
                         <Image url="@images/participants_icon.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="participants" text="0" textAlignment="CENTER">
+                  <Label fx:id="participants" text="0" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -58,8 +58,11 @@
             </HBox>
          </children>
       </VBox>
-      <Button fx:id="deleteButton" layoutX="220.0" layoutY="80.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="26.0" prefWidth="60.0"   text="Delete" visible="false" />
-      <Button fx:id="eventView" layoutX="290.0" layoutY="80.0" mnemonicParsing="false" onAction="#viewEvent" prefHeight="23.0" prefWidth="45.0"   text="View" />
+      <MFXButton fx:id="deleteButton" layoutX="221.0" layoutY="80.0" onAction="#deleteEvent" style="-fx-background-color: #1B6070;" text="Delete" textFill="WHITE" />
+      <MFXButton fx:id="eventView" layoutX="284.0" layoutY="80.0" onAction="#viewEvent" style="-fx-background-color: #1B6070;" text="View" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></MFXButton>
    </children>
    <effect>
       <DropShadow>

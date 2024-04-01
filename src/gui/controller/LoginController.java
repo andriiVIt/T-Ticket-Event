@@ -46,7 +46,7 @@ public class LoginController implements Initializable {
                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/view/adminWindow.fxml"));
                Parent root = fxmlLoader.load();
                Stage stage = new Stage();
-//               stage.setResizable(false);
+               stage.setResizable(false);
                stage.setScene(new Scene(root));
                stage.setTitle("Admin Window");
                stage.show();
@@ -63,7 +63,7 @@ public class LoginController implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/view/coordinatorWindow.fxml"));
                 Parent root = fxmlLoader.load();
                 Stage stage = new Stage();
-//                stage.setResizable(false);
+               stage.setResizable(false);
                 stage.setScene(new Scene(root));
                 stage.setTitle("Coordinator Window");
                 stage.show();

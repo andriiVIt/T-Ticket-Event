@@ -26,15 +26,15 @@
                   <Insets bottom="55.0" />
                </VBox.margin>
             </ImageView>
-            <MFXTextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" />
+            <MFXTextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coordinator Name" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Cancel">
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" text="Cancel">
                      <HBox.margin>
                         <Insets right="7.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Create coupon">
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" text="Create coordinator">
                      <HBox.margin>
                         <Insets left="7.0" />
                      </HBox.margin>

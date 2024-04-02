@@ -33,7 +33,7 @@
                         <Image url="@images/participants_icon.png" />
                      </image>
                   </ImageView>
-                  <MFXTextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" text="Enter name">
+                  <MFXTextField fx:id="customerNameField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" text="Enter name">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -47,7 +47,7 @@
                         <Image url="@images/email.png" />
                      </image>
                   </ImageView>
-                  <MFXTextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" text="Enter email">
+                  <MFXTextField fx:id="customerEmailField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" text="Enter email">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -56,12 +56,12 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Cancel">
+                  <Button mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="110.0" text="Cancel">
                      <HBox.margin>
                         <Insets right="7.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" text="Create customer">
+                  <Button mnemonicParsing="false" onAction="#createCustomer" prefHeight="26.0" prefWidth="110.0" text="Create customer">
                      <HBox.margin>
                         <Insets left="7.0" />
                      </HBox.margin>

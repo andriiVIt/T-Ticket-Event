@@ -14,20 +14,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="gui.controller.AdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminController">
    <children>
       <ScrollPane fx:id="scrollPane" prefHeight="607.0" prefWidth="900.0" style=": ;">
          <content>
             <VBox prefHeight="605.0" prefWidth="898.0" style="-fx-background-color: #1B6070;">
                <children>
-                  <ImageView fitHeight="49.0" fitWidth="375.0">
+                  <ImageView fitHeight="49.0" fitWidth="454.0">
                      <image>
                         <Image url="@images/logo-removebg-preview.png" />
                      </image>
                   </ImageView>
                   <HBox prefHeight="35.0" prefWidth="898.0" spacing="5.0" style=": ;">
                      <children>
-                        <MFXButton onAction="#createCoordinator" prefHeight="26.0" prefWidth="325.0" style="-fx-background-color: #007BFF;" text="Create coordinator" textFill="WHITE">
+                        <MFXButton onAction="#createCoordinator" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #1B6070;" text="Create coordinator" textFill="WHITE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -35,15 +35,7 @@
                               <Font name="Wingdings 2" size="13.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton prefHeight="26.0" prefWidth="271.0" style="-fx-background-color: #007BFF;" text="See all events" textFill="WHITE">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <font>
-                              <Font name="Skia" size="13.0" />
-                           </font>
-                        </MFXButton>
-                        <MFXButton onAction="#createEvent" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color: #007BFF;" text="Create event" textFill="WHITE">
+                        <MFXButton onAction="#createEvent" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #1B6070;" text="Create event" textFill="WHITE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -76,23 +68,23 @@
             </Pane>
          </children>
       </GridPane>
-      <HBox layoutY="576.0" prefHeight="24.0" prefWidth="900.0" spacing="3.0">
+      <HBox layoutY="576.0" prefHeight="24.0" prefWidth="900.0" spacing="10.0">
          <children>
-            <MFXButton prefHeight="27.0" prefWidth="20.0" style="-fx-background-color: #1B6070;" text=" ">
+            <MFXButton minWidth="-Infinity" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #1B6070;" text=" ">
                <HBox.margin>
-                  <Insets />
+                  <Insets left="-30.0" />
                </HBox.margin>
                <graphic>
-                  <ImageView fitHeight="19.0" fitWidth="23.0">
+                  <ImageView fitHeight="19.0" fitWidth="25.0">
                      <image>
                         <Image url="@images/img.png" />
                      </image>
                   </ImageView>
                </graphic>
             </MFXButton>
-            <MFXButton alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="20.0" style="-fx-background-color: #1B6070;" text=" ">
+            <MFXButton alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #1B6070;" text=" ">
                <HBox.margin>
-                  <Insets />
+                  <Insets left="-10.0" />
                </HBox.margin>
                <graphic>
                   <ImageView fitHeight="19.0" fitWidth="23.0">

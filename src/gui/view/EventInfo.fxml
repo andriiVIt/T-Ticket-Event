@@ -16,14 +16,14 @@
       <ListView fx:id="participantsList" layoutX="356.0" layoutY="71.0" prefHeight="254.0" prefWidth="200.0" />
       <HBox alignment="CENTER" layoutX="356.0" layoutY="325.0" prefHeight="53.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#getTicket" prefHeight="25.0" prefWidth="80.0" text="Get ticket">
+            <Button mnemonicParsing="false" onAction="#getTicket" prefHeight="25.0" prefWidth="92.0" text="Get ticket">
                <HBox.margin>
-                  <Insets right="15.0" />
+                  <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#getCoupon" prefHeight="25.0" prefWidth="80.0" text="Get coupon">
+            <Button mnemonicParsing="false" onAction="#getCoupon" prefHeight="25.0" prefWidth="92.0" text="Get coupon">
                <HBox.margin>
-                  <Insets left="15.0" />
+                  <Insets left="10.0" />
                </HBox.margin>
             </Button>
          </children>

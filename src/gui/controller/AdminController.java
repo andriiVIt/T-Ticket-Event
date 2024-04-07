@@ -37,16 +37,7 @@ public class AdminController implements Initializable {
 
     private int currentPage,totalPages;
 
-    public void viewEvents() {
-        double startValue = scrollPane.getVvalue();
-        double endValue = startValue + 1;
-        Timeline timeline = new Timeline(
-                new KeyFrame(Duration.seconds(1),
-                        new KeyValue(scrollPane.vvalueProperty(), endValue, Interpolator.EASE_BOTH)
-                )
-        );
-        timeline.play();
-    }
+
     public void createEvent() {
         BlurEffectUtil.applyBlurEffect(scrollPane, 10);
 
@@ -168,7 +159,7 @@ public class AdminController implements Initializable {
         try {
             populateGridPane();
         } catch (IOException e) {
-//           throw new RuntimeException(e);
+          throw new RuntimeException(e);
         }
     }
     }

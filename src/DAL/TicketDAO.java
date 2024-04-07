@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class TicketDAO {private ConnectionManager connectionManager;
+public class TicketDAO {
+
+    private ConnectionManager connectionManager;
 
     public TicketDAO() {
         connectionManager = new ConnectionManager();

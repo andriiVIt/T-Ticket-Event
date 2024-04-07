@@ -49,7 +49,7 @@ public class EventCardController implements Initializable {
     private AdminController adminController;
     private Consumer<Event> onDeleteEventCallback;
 
-    public EventCardController(Event event, ScrollPane scrollPane, CustomerModel customerModel, EventModel eventModel, AdminController adminWindowController) {
+    public EventCardController(Event event, ScrollPane scrollPane, CustomerModel customerModel, EventModel eventModel, AdminController adminController) {
         this.event = event;
         this.scrollPane = scrollPane;
         this.customerModel = customerModel;
@@ -94,7 +94,7 @@ public class EventCardController implements Initializable {
         BlurEffectUtil.applyBlurEffect(scrollPane, 10);
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui/view/EventInfo.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/view/EventInfo.fxml"));
             Parent createEventParent = fxmlLoader.load();
 
             EventInfoController eventInfoController = fxmlLoader.getController();

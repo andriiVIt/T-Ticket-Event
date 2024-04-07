@@ -9,23 +9,10 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="216.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CouponController">
+<AnchorPane fx:id="createCustomerAnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="387.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CouponController">
    <children>
-      <ImageView fitHeight="412.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/bg.jpg" />
-         </image>
-      </ImageView>
-      <VBox alignment="CENTER" layoutX="102.0" layoutY="50.0" prefHeight="346.0" prefWidth="392.0">
+      <VBox alignment="CENTER" layoutX="-2.0" layoutY="52.0" prefHeight="346.0" prefWidth="392.0">
          <children>
-            <ImageView fitHeight="68.0" fitWidth="396.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/logo-removebg-preview.png" />
-               </image>
-               <VBox.margin>
-                  <Insets bottom="55.0" />
-               </VBox.margin>
-            </ImageView>
             <HBox alignment="CENTER" prefHeight="49.0" prefWidth="396.0">
                <children>
                   <ImageView fitHeight="65.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
@@ -33,7 +20,7 @@
                         <Image url="@images/participants_icon.png" />
                      </image>
                   </ImageView>
-                  <MFXTextField fx:id="customerNameField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" text="Enter name">
+                  <MFXTextField fx:id="nameField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" text="Enter name">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -47,28 +34,17 @@
                         <Image url="@images/email.png" />
                      </image>
                   </ImageView>
-                  <MFXTextField fx:id="customerEmailField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" text="Enter email">
+                  <MFXTextField fx:id="emailField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" text="Enter email">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
                   </MFXTextField>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="110.0" text="Cancel">
-                     <HBox.margin>
-                        <Insets right="7.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#createCustomer" prefHeight="26.0" prefWidth="110.0" text="Create customer">
-                     <HBox.margin>
-                        <Insets left="7.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
          </children>
       </VBox>
+      <Button layoutX="230.0" layoutY="410.0" mnemonicParsing="false" onAction="#createParticipant" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #1B6070;" text="Create " textFill="WHITE" />
+      <Button layoutX="52.0" layoutY="410.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #1B6070;" text="Cancel" textFill="WHITE" />
    </children>
 </AnchorPane>

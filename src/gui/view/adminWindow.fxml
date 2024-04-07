@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminController">
    <children>
       <ScrollPane fx:id="scrollPane" prefHeight="607.0" prefWidth="900.0" style=": ;">
          <content>
@@ -70,7 +63,7 @@
       </GridPane>
       <HBox layoutY="576.0" prefHeight="24.0" prefWidth="900.0" spacing="10.0">
          <children>
-            <MFXButton minWidth="-Infinity" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #1B6070;" text=" ">
+            <MFXButton fx:id="leftBut" minWidth="-Infinity" onAction="#previousPage" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #1B6070;" text=" ">
                <HBox.margin>
                   <Insets left="-30.0" />
                </HBox.margin>
@@ -82,7 +75,7 @@
                   </ImageView>
                </graphic>
             </MFXButton>
-            <MFXButton alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #1B6070;" text=" ">
+            <MFXButton fx:id="rightBut" alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" onAction="#nextPage" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #1B6070;" text=" ">
                <HBox.margin>
                   <Insets left="-10.0" />
                </HBox.margin>

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="createCouponAnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="387.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CouponController">
+<AnchorPane fx:id="createCouponAnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="387.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CreateCouponController">
    <children>
       <VBox alignment="CENTER" layoutX="59.0" layoutY="63.0" prefHeight="346.0" prefWidth="269.0">
          <children>

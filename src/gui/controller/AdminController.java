@@ -5,11 +5,7 @@ import gui.model.CoordinatorModel;
 import gui.model.CustomerModel;
 import gui.model.EventModel;
 import gui.util.BlurEffectUtil;
-import io.github.palexdev.materialfx.controls.MFXScrollPane;
-import javafx.animation.Interpolator;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,7 +16,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.util.Duration;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -159,7 +155,7 @@ public class AdminController implements Initializable {
         try {
             populateGridPane();
         } catch (IOException e) {
-          throw new RuntimeException(e);
+//         throw new RuntimeException(e);
         }
     }
     }

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="createCustomerAnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="387.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CouponController">
+<AnchorPane fx:id="createCustomerAnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="387.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CreateCustomerController">
    <children>
       <VBox alignment="CENTER" layoutX="-2.0" layoutY="52.0" prefHeight="346.0" prefWidth="392.0">
          <children>

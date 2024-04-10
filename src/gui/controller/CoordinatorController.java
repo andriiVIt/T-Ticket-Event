@@ -79,7 +79,7 @@ public class CoordinatorController implements Initializable {
             eventPane.getChildren().clear();
             populateGridPane(coordinator);
         } catch (IOException e) {
-//            throw new RuntimeException(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -152,10 +152,11 @@ public class CoordinatorController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        currentPage = 1;
         try {
             populateGridPane(coordinator);
         } catch (IOException e) {
-//            throw new RuntimeException(e);
+            throw new RuntimeException(e);
         }
 }
 }

@@ -62,7 +62,7 @@
       </GridPane>
       <HBox layoutY="576.0" prefHeight="24.0" prefWidth="900.0" spacing="3.0">
          <children>
-            <MFXButton fx:id="leftButton" onAction="#previousPage" prefHeight="27.0" prefWidth="20.0" style="-fx-background-color: #1B6070;" text=" ">
+            <MFXButton fx:id="leftButton" minWidth="-Infinity" onAction="#previousPage" prefHeight="27.0" prefWidth="31.0" style="-fx-background-color: #1B6070;" text=" ">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -74,7 +74,7 @@
                   </ImageView>
                </graphic>
             </MFXButton>
-            <MFXButton fx:id="rightButton" alignment="CENTER" contentDisplay="CENTER" onAction="#nextPage" prefHeight="27.0" prefWidth="20.0" style="-fx-background-color: #1B6070;" text=" ">
+            <MFXButton fx:id="rightButton" alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" onAction="#nextPage" prefHeight="27.0" prefWidth="20.0" style="-fx-background-color: #1B6070;" text=" ">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -88,7 +88,7 @@
             </MFXButton>
          </children>
          <padding>
-            <Insets left="400.0" />
+            <Insets left="380.0" />
          </padding>
       </HBox>
    </children>

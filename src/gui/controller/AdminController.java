@@ -151,7 +151,7 @@ public class AdminController implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        currentPage = 0;
+        currentPage = 1;
         try {
             populateGridPane();
         } catch (IOException e) {

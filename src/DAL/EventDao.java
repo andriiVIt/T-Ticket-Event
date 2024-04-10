@@ -71,41 +71,19 @@ public class EventDao {private ConnectionManager connectionManager;
     }
 
     public void assignEventCoordinator(Event event, Coordinator coordinator) throws SQLException {
-        Connection con = null;
-        try {
-            con = connectionManager.getConnection();
+        try (Connection con = connectionManager.getConnection()) {
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-
-            try (PreparedStatement pst = con.prepareStatement("INSERT INTO EventCoordinator(eventid, coordinatorid) VALUES(?, ?)", Statement.RETURN_GENERATED_KEYS)) {
-                pst.setInt(1, event.getId());
-                pst.setInt(2, coordinator.getId());
-                pst.executeUpdate();
-
-                con.commit();
-            } catch (SQLException e) {
-
-                e.printStackTrace();
-
-                if (con != null) {
-                    try {
-                        con.rollback();
-                    } catch (SQLException ex) {
-
-                        ex.printStackTrace();
-                    }
-                }
-                throw e;
+            PreparedStatement pst = con.prepareStatement("INSERT INTO EventCoordinator(eventid, coordinatorid) VALUES(?, ?)", Statement.RETURN_GENERATED_KEYS);
+            pst.setInt(1, event.getId());
+            pst.setInt(2, coordinator.getId());
+            pst.executeUpdate();
+            con.commit();
+        } catch (SQLException e) {
+            try (Connection con = connectionManager.getConnection()) {
+                con.rollback();
             }
-        } finally {
-
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }
-            }
+            throw e;
         }
     }
 
@@ -127,27 +105,68 @@ public class EventDao {private ConnectionManager connectionManager;
     }
 
     public void deleteEvent(Event event) throws SQLException {
-        try (Connection con = connectionManager.getConnection()) {
+        // Initialize the connection outside the try-with-resources block to use it in the catch block for rollback
+        Connection con = null;
+        try {
+            // Get the connection from the connection manager
+            con = connectionManager.getConnection();
+            // Turn off auto-commit to manage transactions manually
             con.setAutoCommit(false);
+            // Set a transaction isolation level, if needed
             con.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-            PreparedStatement pstEventCustomer = con.prepareStatement("DELETE FROM EventCustomer WHERE eventid = ?");
-            pstEventCustomer.setInt(1, event.getId());
-            pstEventCustomer.executeUpdate();
 
-            PreparedStatement pstEventCoordinator = con.prepareStatement("DELETE FROM EventCoordinator WHERE eventid = ?");
-            pstEventCoordinator.setInt(1, event.getId());
-            pstEventCoordinator.executeUpdate();
+            // Delete from EventCustomer where the event ID matches
+            try (PreparedStatement pstEventCustomer = con.prepareStatement("DELETE FROM EventCustomer WHERE eventid = ?")) {
+                pstEventCustomer.setInt(1, event.getId());
+                pstEventCustomer.executeUpdate();
+            }
 
-            PreparedStatement pstEvent = con.prepareStatement("DELETE FROM Event WHERE id = ?");
-            pstEvent.setInt(1, event.getId());
-            pstEvent.executeUpdate();
+            // Delete from EventCoordinator where the event ID matches
+            try (PreparedStatement pstEventCoordinator = con.prepareStatement("DELETE FROM EventCoordinator WHERE eventid = ?")) {
+                pstEventCoordinator.setInt(1, event.getId());
+                pstEventCoordinator.executeUpdate();
+            }
 
+            // Finally, delete from Event where the event ID matches
+            try (PreparedStatement pstEvent = con.prepareStatement("DELETE FROM Event WHERE id = ?")) {
+                pstEvent.setInt(1, event.getId());
+                pstEvent.executeUpdate();
+            }
+
+            // Commit the transaction if all operations were successful
             con.commit();
         } catch (SQLException e) {
-            try (Connection con = connectionManager.getConnection()) {
-                con.rollback();
+            // Rollback any changes made during the transaction on the same connection
+            if (con != null) {
+                try {
+                    con.rollback();
+                } catch (SQLException ex) {
+                    // Log the exception or handle the rollback failure
+                    ex.printStackTrace();
+                }
             }
+            // Rethrow the original SQLException
             throw e;
+        } finally {
+            // Attempt to reset the connection's auto-commit mode to true if it's not null
+            if (con != null) {
+                try {
+                    con.setAutoCommit(true);
+                } catch (SQLException ex) {
+                    // Handle or log this exception
+                    ex.printStackTrace();
+                }
+            }
+            // Since we didn't use try-with-resources for the connection (to access it in the catch block),
+            // we need to ensure it's closed here
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException ex) {
+                    // Handle or log this exception
+                    ex.printStackTrace();
+                }
+            }
         }
     }
 

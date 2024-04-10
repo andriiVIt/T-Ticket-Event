@@ -71,7 +71,7 @@ public class EventCardController implements Initializable {
             eventModel.deleteEvent(event);
             adminController.refreshEventCards();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+           throw new RuntimeException(e);
         }
     }
 
@@ -113,7 +113,7 @@ public class EventCardController implements Initializable {
             stage.setTitle(event.getName());
             Scene scene = new Scene(createEventParent);
             scene.setFill(Color.TRANSPARENT);
-//            scene.getStylesheets().add("ets/gui/view/styles/event_info_style.css");
+
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {

@@ -1,0 +1,27 @@
+.root {
+    -fx-background-color: #1B6070;
+    -admin-pref-height: 600.0;
+    -admin-pref-width: 900.0;
+}
+
+#scrollPane {
+    -fx-background-color: #1B6070;
+}
+
+#logOutButton {
+    -fx-background-color: #1B6070;
+    -fx-text-fill: white;
+}
+
+.button, .mfx-button {
+    -fx-background-color: #1B6070;
+    -fx-text-fill: white;
+}
+
+#leftButton, #rightButton {
+    -fx-background-color: #1B6070;
+}
+
+#leftButton:hover, #rightButton:hover {
+    -fx-background-color: #14505B;
+}

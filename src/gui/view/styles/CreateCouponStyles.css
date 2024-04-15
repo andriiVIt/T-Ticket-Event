@@ -1,0 +1,21 @@
+#createCouponAnchorPane {
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-height: 450.0;
+    -fx-pref-width: 387.0;
+    -fx-background-color: #1B6070;
+}
+
+#createCouponAnchorPane .mfxTextField {
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-height: 29.0;
+    -fx-pref-width: 181.0;
+}
+
+#createCouponAnchorPane .button {
+    -fx-background-color: #1B6070;
+    -fx-pref-height: 26.0;
+    -fx-pref-width: 100.0;
+    -fx-text-fill: white;
+}

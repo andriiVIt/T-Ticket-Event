@@ -14,9 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminController">
+<AnchorPane stylesheets="@styles/adminWindowStyles.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminController">
    <children>
-      <ScrollPane fx:id="scrollPane" prefHeight="607.0" prefWidth="900.0" style=": ;">
+      <ScrollPane fx:id="scrollPane" prefHeight="607.0" prefWidth="900.0">
          <content>
             <VBox prefHeight="605.0" prefWidth="898.0" style="-fx-background-color: #1B6070;">
                <children>
@@ -64,7 +64,7 @@
             </VBox>
          </content>
       </ScrollPane>
-      <GridPane fx:id="gridPane" layoutX="10.0" layoutY="85.0" prefHeight="512.0" prefWidth="884.0" style="-fx-background-color: transparent;">
+      <GridPane fx:id="gridPane" layoutX="10.0" layoutY="85.0" prefHeight="512.0" prefWidth="884.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

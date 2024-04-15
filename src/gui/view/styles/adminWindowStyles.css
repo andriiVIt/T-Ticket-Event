@@ -1,0 +1,25 @@
+.root {
+    -fx-background-color: #1B6070;
+}
+
+#scrollPane {
+    -fx-background-color: #1B6070;
+}
+
+#logOutButton {
+    -fx-background-color: #1B6070;
+    -fx-text-fill: white;
+}
+
+.button, .mfx-button {
+    -fx-background-color: #1B6070;
+    -fx-text-fill: white;
+}
+
+#leftBut, #rightBut {
+    -fx-background-color: #1B6070;
+}
+
+#leftBut:hover, #rightBut:hover {
+    -fx-background-color: #14505B;
+}

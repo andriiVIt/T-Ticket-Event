@@ -14,9 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CoordinatorController">
+<AnchorPane stylesheets="@styles/coordinatorWindowStyles.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CoordinatorController">
    <children>
-      <ScrollPane fx:id="scrollPane" prefHeight="607.0" prefWidth="900.0" style="-fx-background-color: #1B6070;">
+      <ScrollPane fx:id="scrollPane">
          <content>
             <VBox prefHeight="604.0" prefWidth="898.0" style="-fx-background-color: #1B6070;">
                <children>
@@ -61,7 +61,7 @@
             </VBox>
          </content>
       </ScrollPane>
-      <GridPane fx:id="eventPane" layoutX="10.0" layoutY="85.0" prefHeight="512.0" prefWidth="884.0" style="-fx-background-color: transparent;">
+      <GridPane fx:id="eventPane" layoutX="10.0" layoutY="85.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -80,7 +80,7 @@
             </Pane>
          </children>
       </GridPane>
-      <HBox layoutY="576.0" prefHeight="24.0" prefWidth="900.0" spacing="3.0">
+      <HBox layoutY="576.0" spacing="3.0">
          <children>
             <MFXButton fx:id="leftButton" minWidth="-Infinity" onAction="#previousPage" prefHeight="27.0" prefWidth="31.0" style="-fx-background-color: #1B6070;" text=" ">
                <HBox.margin>

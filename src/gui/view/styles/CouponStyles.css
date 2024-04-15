@@ -1,0 +1,72 @@
+/* CouponStyles.css */
+
+#couponAnchor {
+    -fx-pref-height: 296.0;
+    -fx-pref-width: 650.0;
+}
+
+#couponAnchor #couponBackground {
+    -fx-fit-height: 326.0;
+    -fx-fit-width: 466.0;
+}
+
+#couponAnchor #logo {
+    -fx-fit-height: 41.0;
+    -fx-fit-width: 351.0;
+    -fx-layout-x: 91.0;
+    -fx-layout-y: 39.0;
+}
+
+#couponAnchor #couponSection {
+    -fx-layout-x: 48.0;
+    -fx-layout-y: 133.0;
+    -fx-pref-height: 173.0;
+    -fx-pref-width: 370.0;
+}
+
+#couponAnchor #couponLabel {
+    -fx-layout-x: 86.0;
+    -fx-layout-y: 58.0;
+    -fx-text-fill: white;
+    -fx-font-size: 30.0;
+}
+
+#couponAnchor #couponValue {
+    -fx-layout-x: 193.0;
+    -fx-layout-y: 58.0;
+    -fx-pref-height: 37.0;
+    -fx-pref-width: 220.0;
+    -fx-font-size: 30.0;
+    -fx-text-fill: white;
+}
+
+#couponAnchor #qrCodeImage {
+    -fx-fit-height: 146.0;
+    -fx-fit-width: 165.0;
+    -fx-layout-x: 471.0;
+    -fx-layout-y: 112.0;
+}
+
+#couponAnchor #barcodeImage {
+    -fx-fit-height: 298.0;
+    -fx-fit-width: 76.0;
+    -fx-layout-x: 7.0;
+    -fx-layout-y: 5.0;
+}
+
+#couponAnchor #printButton {
+    -fx-layout-x: 541.0;
+    -fx-layout-y: 258.0;
+}
+
+#couponAnchor #couponLine {
+    -fx-end-x: -66.2696533203125;
+    -fx-end-y: 295.0857849121094;
+    -fx-layout-x: 532.0;
+    -fx-layout-y: 12.0;
+    -fx-start-x: -66.2696533203125;
+    -fx-start-y: -13.0;
+    -fx-stroke: white;
+    -fx-stroke-width: 2.0;
+}
+

@@ -1,0 +1,24 @@
+#createCoordinatorAnchorPane {
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-height: 450.0;
+    -fx-pref-width: 387.0;
+    -fx-background-color: #1B6070;
+}
+
+#createCoordinatorAnchorPane .text-field {
+    -fx-pref-height: 29.0;
+    -fx-pref-width: 182.0;
+}
+
+#createCoordinatorAnchorPane .password-field {
+    -fx-pref-height: 25.0;
+    -fx-pref-width: 181.0;
+}
+
+#createCoordinatorAnchorPane .button {
+    -fx-background-color: #1B6070;
+    -fx-pref-height: 26.0;
+    -fx-pref-width: 120.0;
+    -fx-text-fill: white;
+}

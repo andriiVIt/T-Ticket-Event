@@ -6,17 +6,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="createCouponAnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="387.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CreateCouponController">
+<AnchorPane fx:id="createCouponAnchorPane" stylesheets="@styles/CreateCouponStyles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CreateCouponController">
    <children>
-      <VBox alignment="CENTER" layoutX="5.0" layoutY="114.0" prefHeight="108.0" prefWidth="387.0">
+      <VBox alignment="CENTER" layoutX="59.0" layoutY="63.0" prefHeight="346.0" prefWidth="269.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="74.0" prefWidth="269.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: #1B6070;" text="Cancel" textFill="WHITE" />
-                  <Button mnemonicParsing="false" onAction="#printCoupon" prefHeight="26.0" prefWidth="129.0" style="-fx-background-color: #1B6070;" text="Print" textFill="WHITE" />
-               </children></HBox>
+            <MFXTextField fx:id="couponNameField" styleClass="mfxTextField" promptText="Enter Coupon Name" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
          </children>
       </VBox>
-      <MFXTextField fx:id="couponNameField" layoutX="108.0" layoutY="85.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="181.0" promptText="Enter Coupon Name" />
+      <Button layoutX="245.0" layoutY="416.0" mnemonicParsing="false" onAction="#printCoupon" styleClass="button" text="Print" />
+      <Button layoutX="58.0" layoutY="414.0" mnemonicParsing="false" onAction="#cancel" styleClass="button" text="Cancel" />
    </children>
 </AnchorPane>

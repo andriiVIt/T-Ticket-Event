@@ -58,11 +58,25 @@
             </HBox>
          </children>
       </VBox>
-      <MFXButton fx:id="deleteButton" layoutX="221.0" layoutY="80.0" onAction="#deleteEvent" style="-fx-background-color: #1B6070;" text="Delete" textFill="WHITE" />
-      <MFXButton fx:id="eventView" layoutX="284.0" layoutY="80.0" onAction="#viewEvent" style="-fx-background-color: #1B6070;" text="View" textFill="WHITE">
+      <MFXButton fx:id="deleteButton" ellipsisString="" layoutX="233.0" layoutY="79.0" onAction="#deleteEvent" prefHeight="29.0" prefWidth="50.0" style="-fx-background-color: #1B6070;" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="31.0">
+               <image>
+                  <Image url="@images/trash.png" />
+               </image>
+            </ImageView>
+         </graphic></MFXButton>
+      <MFXButton fx:id="eventView" ellipsisString="" layoutX="284.0" layoutY="80.0" onAction="#viewEvent" prefHeight="20.0" prefWidth="42.0" style="-fx-background-color: #1B6070;" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
-         </font></MFXButton>
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="27.0">
+               <image>
+                  <Image url="@images/open-eye.png" />
+               </image>
+            </ImageView>
+         </graphic></MFXButton>
    </children>
    <effect>
       <DropShadow>

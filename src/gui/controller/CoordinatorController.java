@@ -6,6 +6,8 @@ import gui.model.CoordinatorModel;
 import gui.model.CustomerModel;
 import gui.model.EventModel;
 import gui.util.BlurEffectUtil;
+import io.github.palexdev.materialfx.controls.MFXButton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -24,6 +26,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CoordinatorController implements Initializable {
+    public MFXButton logOutButton;
     // instance variables with @FXML
     @FXML
     private ScrollPane scrollPane;
@@ -159,4 +162,45 @@ public class CoordinatorController implements Initializable {
             throw new RuntimeException(e);
         }
 }
+
+    public void createEvent(ActionEvent actionEvent) { BlurEffectUtil.applyBlurEffect(scrollPane, 10);
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/view/CreateEvent.fxml"));
+            Parent createEventParent = fxmlLoader.load();
+
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Create Event");
+            stage.setResizable(false);
+            Scene scene = new Scene(createEventParent);
+            stage.setScene(scene);
+
+            CreateEventController createEventController = fxmlLoader.getController();
+            createEventController.setEventModel(new EventModel());
+            createEventController.setCoordinatorModel(new CoordinatorModel());
+            createEventController.setRefreshCallback(this::refreshEventCards);
+            createEventController.setScrollPane(scrollPane);
+            createEventController.setOnCloseRequestHandler(stage);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void clickLogOut(ActionEvent actionEvent) {{try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/Login.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        
+        stage.show();
+        ((Stage) logOutButton.getScene().getWindow()).close();
+
+    } catch (IOException e) {
+        throw new RuntimeException(e);
+    }
+    }
+    }
 }

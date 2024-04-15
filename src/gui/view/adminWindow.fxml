@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.palexdev.materialfx.controls.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminController">
    <children>
       <ScrollPane fx:id="scrollPane" prefHeight="607.0" prefWidth="900.0" style=": ;">
          <content>
@@ -20,7 +27,7 @@
                   </ImageView>
                   <HBox prefHeight="35.0" prefWidth="898.0" spacing="5.0" style=": ;">
                      <children>
-                        <MFXButton onAction="#createCoordinator" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #1B6070;" text="Create coordinator" textFill="WHITE">
+                        <MFXButton buttonType="RAISED" onAction="#createCoordinator" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #1B6070;" text="Create coordinator" textFill="WHITE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -28,13 +35,28 @@
                               <Font name="Wingdings 2" size="13.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton onAction="#createEvent" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #1B6070;" text="Create event" textFill="WHITE">
+                        <MFXButton buttonType="RAISED" onAction="#createEvent" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #1B6070;" text="Create event" textFill="WHITE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
+                        </MFXButton>
+                        <MFXButton fx:id="logOutButton" buttonType="RAISED" nodeOrientation="RIGHT_TO_LEFT" onAction="#clickLogOut" prefHeight="30.0" prefWidth="87.0" rippleAnimateBackground="false" style="-fx-background-color: #1B6070;" text="Log out" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="550.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="19.0">
+                                 <image>
+                                    <Image url="@images/LogOut.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </MFXButton>
                      </children>
                   </HBox>

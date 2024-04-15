@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="createCoordinatorAnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="387.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CreateCoordinatorController">
+<AnchorPane fx:id="createCoordinatorAnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="204.0" prefWidth="388.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CreateCoordinatorController">
    <children>
-      <VBox alignment="CENTER" layoutY="43.0" prefHeight="346.0" prefWidth="387.0">
+      <VBox alignment="CENTER" layoutX="1.0" layoutY="36.0" prefHeight="145.0" prefWidth="387.0">
          <children>
             <TextField fx:id="coordinatorNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="182.0" promptText=" Name" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -19,7 +19,7 @@
             </HBox>
          </children>
       </VBox>
-      <Button layoutX="226.0" layoutY="414.0" mnemonicParsing="false" onAction="#createCoordinator" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #1B6070;" text="Create " textFill="WHITE" />
-      <Button layoutX="40.0" layoutY="414.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #1B6070;" text="Cancel" textFill="WHITE" />
+      <Button layoutX="217.0" layoutY="168.0" mnemonicParsing="false" onAction="#createCoordinator" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #1B6070;" text="Create " textFill="WHITE" />
+      <Button layoutX="34.0" layoutY="168.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #1B6070;" text="Cancel" textFill="WHITE" />
    </children>
 </AnchorPane>

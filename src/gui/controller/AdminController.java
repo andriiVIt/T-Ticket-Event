@@ -6,6 +6,8 @@ import gui.model.CustomerModel;
 import gui.model.EventModel;
 import gui.util.BlurEffectUtil;
 
+import io.github.palexdev.materialfx.controls.MFXButton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -26,6 +28,7 @@ import java.util.ResourceBundle;
 
 public class AdminController implements Initializable {
 
+    public MFXButton logOutButton;
     @FXML
     private ScrollPane scrollPane;
     @FXML
@@ -158,5 +161,20 @@ public class AdminController implements Initializable {
 //         throw new RuntimeException(e);
         }
     }
+
+    public void clickLogOut(ActionEvent actionEvent) {try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/Login.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        stage.show();
+        ((Stage) logOutButton.getScene().getWindow()).close();
+
+    } catch (IOException e) {
+        throw new RuntimeException(e);
     }
+    }
+}
 

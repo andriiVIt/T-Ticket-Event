@@ -12,7 +12,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="eventInfoAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.EventInfoController">
+<AnchorPane fx:id="eventInfoAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: #1B6070; -fx-border-color: White;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.EventInfoController">
    <children>
       <ListView fx:id="participantsList" layoutX="363.0" layoutY="71.0" prefHeight="309.0" prefWidth="236.0" style="-fx-background-radius: 15;" />
       <TextField fx:id="searchField" layoutX="497.0" layoutY="16.0" prefHeight="25.0" prefWidth="102.0" promptText="search" />

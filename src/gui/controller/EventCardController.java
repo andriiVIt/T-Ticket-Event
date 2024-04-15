@@ -5,7 +5,6 @@ import gui.model.CustomerModel;
 import gui.model.EventModel;
 import gui.model.TicketModel;
 import gui.util.BlurEffectUtil;
-import io.github.palexdev.materialfx.controls.MFXScrollPane;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

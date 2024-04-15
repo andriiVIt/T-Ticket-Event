@@ -27,7 +27,7 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Label fx:id="couponLabel" layoutX="193.0" layoutY="58.0" prefHeight="37.0" prefWidth="220.0" text="-" textFill="WHITE">
+            <Label fx:id="couponLabel" layoutX="193.0" layoutY="58.0" prefHeight="37.0" prefWidth="220.0" text="-">
                <font>
                   <Font size="30.0" />
                </font>

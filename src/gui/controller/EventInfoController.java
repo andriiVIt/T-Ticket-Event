@@ -181,7 +181,7 @@ public class EventInfoController implements Initializable {
     }
     public void getCoupon() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/view/Coupon.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/view/CreateCoupon.fxml"));
             Parent createCouponParent = fxmlLoader.load();
 
             Stage stage = new Stage();

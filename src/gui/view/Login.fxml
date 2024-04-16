@@ -8,18 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="loginVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.LoginController">
+<VBox id="Vbox" fx:id="loginVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="/gui/view/styles/LoginStyles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.LoginController">
    <children>
       <AnchorPane prefHeight="317.0" prefWidth="600.0">
          <children>
-            <ImageView fitHeight="406.0" fitWidth="601.0" layoutY="-1.0">
-               <image>
-                  <Image url="@images/bg.jpg" />
-               </image>
-            </ImageView>
-            <MFXTextField fx:id="userNameField" layoutX="200.0" layoutY="214.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="202.0" promptText="Username" />
-            <MFXPasswordField fx:id="passwordField" layoutX="200.0" layoutY="252.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="202.0" promptText="Password" />
-            <MFXButton fx:id="loginButton" layoutX="246.0" layoutY="304.0" onAction="#logIn" prefHeight="26.0" prefWidth="94.0" text="Log-in" />
+            <MFXTextField id="UserName" fx:id="userNameField" layoutX="200.0" layoutY="214.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="202.0" promptText="Username" />
+            <MFXPasswordField id="Password" fx:id="passwordField" layoutX="200.0" layoutY="252.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="202.0" promptText="Password" />
+            <MFXButton id="mfx-button" fx:id="loginButton" layoutX="246.0" layoutY="304.0" onAction="#logIn" prefHeight="26.0" prefWidth="94.0" text="Log-in" />
             <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="156.0" layoutY="252.0">
                <image>
                   <Image url="@images/lockIconLog.png" />

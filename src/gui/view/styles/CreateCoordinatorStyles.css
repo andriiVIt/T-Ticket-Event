@@ -1,0 +1,17 @@
+#Pane{
+    -fx-background-color: #1B6070;
+}
+.button{
+    -fx-background-color:#1B6070;
+    -fx-text-fill: White;
+    -fx-font-size:13;
+}
+.Field1{
+    -fx-prompt-text-fill: Name;
+    -fx-font-size: 13;
+    -fx-text-fill: Greey;
+}
+.Field2{
+    -fx-prompt-text-fill: Password;
+    -fx-font-size: 13;
+}

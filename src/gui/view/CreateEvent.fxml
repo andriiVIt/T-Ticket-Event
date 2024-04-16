@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.CheckComboBox?>
 
-<AnchorPane fx:id="createEventAnchorPane" prefHeight="450.0" prefWidth="387.0" style="-fx-background-color: #1B6070;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CreateEventController">
+<AnchorPane id="Pane" fx:id="createEventAnchorPane" prefHeight="450.0" prefWidth="387.0" stylesheets="/gui/view/styles/CreateEventStyles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CreateEventController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="41.0" layoutY="23.0" prefHeight="393.0" prefWidth="311.0" spacing="30.0">
          <children>
@@ -18,11 +18,11 @@
             <MFXDatePicker fx:id="eventDateField" prefHeight="38.0" prefWidth="201.0" promptText="Date" />
             <Spinner fx:id="eventTimeField" prefHeight="31.0" prefWidth="205.0" />
             <CheckComboBox fx:id="eventCoordinatorsField" prefHeight="26.0" prefWidth="198.0" style="-fx-background-color: #1B6070;" title="Select Coordinator" />
-            <MFXButton onAction="#getEventImage" style="-fx-background-color: #1B6070;" text="Select Image" textFill="WHITE" />
+            <MFXButton onAction="#getEventImage" styleClass="mfx-button" text="Select Image" textFill="WHITE" />
          </children>
       </VBox>
-      <MFXButton layoutX="71.0" layoutY="417.0" onAction="#createEvent" style="-fx-background-color: #1B6070;" text="Create" textFill="WHITE" />
-      <MFXButton layoutX="256.0" layoutY="417.0" onAction="#cancel" style="-fx-background-color: #1B6070;" text="Cancel" textFill="WHITE">
+      <MFXButton layoutX="71.0" layoutY="417.0" onAction="#createEvent" styleClass="mfx-button" text="Create" textFill="WHITE" />
+      <MFXButton layoutX="256.0" layoutY="417.0" onAction="#cancel" styleClass="mfx-button" text="Cancel" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></MFXButton>

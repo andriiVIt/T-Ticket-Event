@@ -14,11 +14,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="900.0" style=": ;" stylesheets="/gui/view/styles/adminWindowStyles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AdminController">
    <children>
       <ScrollPane fx:id="scrollPane" prefHeight="607.0" prefWidth="900.0" style=": ;">
          <content>
-            <VBox prefHeight="605.0" prefWidth="898.0" style="-fx-background-color: #1B6070;">
+            <VBox id="VBox" prefHeight="605.0" prefWidth="898.0">
                <children>
                   <ImageView fitHeight="49.0" fitWidth="454.0">
                      <image>
@@ -27,7 +27,7 @@
                   </ImageView>
                   <HBox prefHeight="35.0" prefWidth="898.0" spacing="5.0" style=": ;">
                      <children>
-                        <MFXButton buttonType="RAISED" onAction="#createCoordinator" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #1B6070;" text="Create coordinator" textFill="WHITE">
+                        <MFXButton buttonType="RAISED" onAction="#createCoordinator" prefHeight="26.0" prefWidth="142.0" style=": ;" styleClass="mfx-button" text="Create coordinator" textFill="WHITE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -35,7 +35,7 @@
                               <Font name="Wingdings 2" size="13.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton buttonType="RAISED" onAction="#createEvent" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #1B6070;" text="Create event" textFill="WHITE">
+                        <MFXButton buttonType="RAISED" onAction="#createEvent" prefHeight="26.0" prefWidth="119.0" style=": ;" styleClass="mfx-button" text="Create event" textFill="WHITE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -43,7 +43,7 @@
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton fx:id="logOutButton" buttonType="RAISED" nodeOrientation="RIGHT_TO_LEFT" onAction="#clickLogOut" prefHeight="30.0" prefWidth="87.0" rippleAnimateBackground="false" style="-fx-background-color: #1B6070;" text="Log out" textFill="WHITE">
+                        <MFXButton fx:id="logOutButton" buttonType="RAISED" nodeOrientation="RIGHT_TO_LEFT" onAction="#clickLogOut" prefHeight="30.0" prefWidth="94.0" rippleAnimateBackground="false" style=": ;" styleClass="mfx-button" text="Log out" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
@@ -51,7 +51,7 @@
                               <Insets left="550.0" />
                            </HBox.margin>
                            <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="19.0">
+                              <ImageView fitHeight="18.0" fitWidth="19.0">
                                  <image>
                                     <Image url="@images/LogOut.png" />
                                  </image>
@@ -85,7 +85,7 @@
       </GridPane>
       <HBox layoutY="576.0" prefHeight="24.0" prefWidth="900.0" spacing="10.0">
          <children>
-            <MFXButton fx:id="leftBut" minWidth="-Infinity" onAction="#previousPage" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #1B6070;" text=" ">
+            <MFXButton fx:id="leftBut" minWidth="-Infinity" onAction="#previousPage" prefHeight="27.0" prefWidth="35.0" style=": ;" styleClass="mfx-button" text=" ">
                <HBox.margin>
                   <Insets left="-30.0" />
                </HBox.margin>
@@ -97,7 +97,7 @@
                   </ImageView>
                </graphic>
             </MFXButton>
-            <MFXButton fx:id="rightBut" alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" onAction="#nextPage" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #1B6070;" text=" ">
+            <MFXButton fx:id="rightBut" alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" onAction="#nextPage" prefHeight="27.0" prefWidth="35.0" style=": ;" styleClass="mfx-button" text=" ">
                <HBox.margin>
                   <Insets left="-10.0" />
                </HBox.margin>

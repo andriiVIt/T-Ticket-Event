@@ -1,0 +1,8 @@
+#Pane{
+    -fx-background-color:  #1B6070;
+}
+. mfx-button{
+    -fx-background-color: #1B6070;
+    -fx-font-size: 13;
+    -fx-text-fill: White;
+}

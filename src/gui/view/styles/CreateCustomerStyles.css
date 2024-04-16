@@ -1,0 +1,19 @@
+#AnchorPane {
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-height: 226;
+    -fx-pref-width: 394;
+    -fx-background-color: #1B6070;
+}
+.mfxTextField {
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-height: 29.0;
+    -fx-pref-width: 181.0;
+}
+.button {
+    -fx-background-color: #1B6070;
+    -fx-pref-height: 26.0;
+    -fx-pref-width: 110.0;
+    -fx-text-fill: white;
+}

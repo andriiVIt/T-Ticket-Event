@@ -12,23 +12,23 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="eventInfoAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" style="-fx-background-color: #1B6070; -fx-border-color: White;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.EventInfoController">
+<AnchorPane id="AnchorPane" fx:id="eventInfoAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" stylesheets="/gui/view/styles/EventInfoStyles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.EventInfoController">
    <children>
-      <ListView fx:id="participantsList" layoutX="363.0" layoutY="71.0" prefHeight="309.0" prefWidth="236.0" style="-fx-background-radius: 15;" />
+      <ListView id="List" fx:id="participantsList" layoutX="363.0" layoutY="71.0" prefHeight="309.0" prefWidth="236.0" />
       <TextField fx:id="searchField" layoutX="497.0" layoutY="16.0" prefHeight="25.0" prefWidth="102.0" promptText="search" />
-      <VBox layoutX="11.0" layoutY="118.0" opacity="0.9" prefHeight="229.0" prefWidth="260.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+      <VBox id="VBox" layoutX="11.0" layoutY="118.0" opacity="0.9" prefHeight="229.0" prefWidth="260.0">
          <children>
-            <Label fx:id="locationLabel" alignment="CENTER" prefHeight="30.0" prefWidth="256.0" text="--Location--" textAlignment="CENTER">
+            <Label fx:id="locationLabel" alignment="CENTER" prefHeight="30.0" prefWidth="256.0" styleClass="EventLabels" text="--Location--" textAlignment="CENTER">
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <Label fx:id="dateLabel" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="256.0" text="--date---" textAlignment="CENTER">
+            <Label fx:id="dateLabel" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="256.0" styleClass="EventLabels" text="--date---" textAlignment="CENTER">
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <Label fx:id="noteLabel" alignment="TOP_CENTER" layoutX="10.0" layoutY="32.0" prefHeight="65.0" prefWidth="256.0" text="--note--" textAlignment="CENTER">
+            <Label fx:id="noteLabel" alignment="TOP_CENTER" layoutX="10.0" layoutY="32.0" prefHeight="65.0" prefWidth="256.0" styleClass="EventLabels" text="--note--" textAlignment="CENTER">
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
@@ -42,9 +42,9 @@
             </DropShadow>
          </effect>
       </VBox>
-      <Button layoutX="27.0" layoutY="394.0" mnemonicParsing="false" onAction="#getTicket" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #1B6070;" text="Get ticket" textFill="WHITE" />
-      <Button layoutX="132.0" layoutY="394.0" mnemonicParsing="false" onAction="#getCoupon" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #1B6070;" text="Get coupon" textFill="WHITE" />
-      <Label fx:id="eventTitleLabel" alignment="CENTER" layoutX="27.0" layoutY="64.0" opacity="0.8" prefHeight="29.0" prefWidth="210.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="event">
+      <Button layoutX="27.0" layoutY="394.0" mnemonicParsing="false" onAction="#getTicket" prefHeight="25.0" prefWidth="92.0" styleClass="Button" text="Get ticket" textFill="WHITE" />
+      <Button layoutX="132.0" layoutY="394.0" mnemonicParsing="false" onAction="#getCoupon" prefHeight="25.0" prefWidth="92.0" styleClass="Button" text="Get coupon" textFill="WHITE" />
+      <Label id="EventLabel" fx:id="eventTitleLabel" alignment="CENTER" layoutX="27.0" layoutY="64.0" opacity="0.8" prefHeight="29.0" prefWidth="210.0" styleClass="EventLabels" text="event">
          <font>
             <Font size="24.0" />
          </font>
@@ -56,10 +56,10 @@
             </DropShadow>
          </effect>
       </Label>
-      <Button layoutX="356.0" layoutY="16.0" mnemonicParsing="false" onAction="#addParticipant" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #1B6070;" text="Add" textFill="WHITE" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="426.0" layoutY="16.0" mnemonicParsing="false" onAction="#deleteParticipant" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #1B6070;" text="Remove" textFill="WHITE" />
-      <Button fx:id="closeButton" layoutX="530.0" layoutY="394.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #1B6070;" text="Close" textFill="WHITE" />
-      <Button layoutX="366.0" layoutY="394.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #1B6070;" text="Delete Event" textFill="WHITE" />
+      <Button layoutX="356.0" layoutY="16.0" mnemonicParsing="false" onAction="#addParticipant" prefHeight="25.0" prefWidth="70.0" styleClass="Button" text="Add" textFill="WHITE" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="426.0" layoutY="16.0" mnemonicParsing="false" onAction="#deleteParticipant" prefHeight="26.0" prefWidth="64.0" styleClass="Button" text="Remove" textFill="WHITE" />
+      <Button fx:id="closeButton" layoutX="530.0" layoutY="394.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="76.0" styleClass="Button" text="Close" textFill="WHITE" />
+      <Button layoutX="366.0" layoutY="394.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="26.0" prefWidth="92.0" styleClass="Button" text="Delete Event" textFill="WHITE" />
    </children>
    <effect>
       <Blend />

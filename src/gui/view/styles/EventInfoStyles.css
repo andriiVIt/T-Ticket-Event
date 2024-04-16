@@ -1,0 +1,27 @@
+#AnchorPane{
+    -fx-background-color:  #1B6070;
+    -fx-border-color: White;
+}
+.Button{
+    -fx-background-color: #1B6070;
+    -fx-font-size: 13;
+    -fx-text-fill: White;
+}
+#EventLabel{
+    -fx-background-color: White;
+    -fx-background-radius:20;
+
+}
+#VBox{
+    -fx-background-color: White;
+    -fx-background-radius: 20;
+}
+#List{
+    -fx-background-color: White;
+    -fx-background-radius: 5;
+
+}
+.EventLabels{
+    -fx-text-fill: Black;
+
+}

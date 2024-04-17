@@ -7,12 +7,14 @@ public class Ticket {private UUID uuid;
     private Customer customer;
     private String ticketType;
 
+
+    // Constructor to initialize Ticket without a UUID (UUID might be set after creation)
     public Ticket(String ticketType, Event event, Customer customer) {
         this.ticketType = ticketType;
         this.event = event;
         this.customer = customer;
     }
-
+    // Constructor to initialize Ticket with a UUID
     public Ticket(UUID uuid, String ticketType, Event event, Customer customer) {
         this(ticketType, event, customer);
         this.uuid = uuid;

@@ -27,29 +27,27 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class AdminController implements Initializable {
-
     public MFXButton logOutButton;
     @FXML
     private ScrollPane scrollPane;
     @FXML
     private GridPane gridPane;
 
-    private int currentPage,totalPages;
+    private int currentPage, totalPages;
 
-
+    // Method to handle creating a new event
     public void createEvent() {
-        BlurEffectUtil.applyBlurEffect(scrollPane, 10);
+        BlurEffectUtil.applyBlurEffect(scrollPane, 10); // Apply a blur effect to the scroll pane
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/view/CreateEvent.fxml"));
             Parent createEventParent = fxmlLoader.load();
 
             Stage stage = new Stage();
-            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initModality(Modality.APPLICATION_MODAL); // Set the window modality
             stage.setTitle("Create Event");
-            stage.setResizable(false);
-            Scene scene = new Scene(createEventParent);
-            stage.setScene(scene);
+            stage.setResizable(false); // Make the window not resizable
+            stage.setScene(new Scene(createEventParent));
 
             CreateEventController createEventController = fxmlLoader.getController();
             createEventController.setEventModel(new EventModel());
@@ -59,19 +57,21 @@ public class AdminController implements Initializable {
             createEventController.setOnCloseRequestHandler(stage);
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); // Proper error handling should be implemented
         }
     }
+
+    // Method to handle creating a new coordinator
     public void createCoordinator() {
-        BlurEffectUtil.applyBlurEffect(scrollPane, 10);
+        BlurEffectUtil.applyBlurEffect(scrollPane, 10); // Apply blur effect to the scroll pane
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/view/CreateCoordinator.fxml"));
             Parent createEventParent = fxmlLoader.load();
 
             Stage stage = new Stage();
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
+            stage.initModality(Modality.APPLICATION_MODAL); // Set window modality
+            stage.setResizable(false); // Window is not resizable
             stage.setTitle("Create Coordinator");
             stage.setScene(new Scene(createEventParent));
 
@@ -81,24 +81,21 @@ public class AdminController implements Initializable {
             createCoordinatorController.setOnCloseRequestHandler(stage);
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); // Proper error handling should be implemented
         }
     }
 
-
+    // Method to refresh the display of event cards
     public void refreshEventCards() {
         try {
-            gridPane.getChildren().clear();
+            gridPane.getChildren().clear(); // Clear existing content
             populateGridPane();
         } catch (IOException e) {
-//            throw new RuntimeException(e);
+            // Better error handling should be considered
         }
     }
 
-
-
-
-
+    // Populate the grid pane with event cards
     private void populateGridPane() throws IOException {
         EventModel eventModel = new EventModel();
         List<Event> events;
@@ -107,6 +104,7 @@ public class AdminController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException("Failed to fetch events from the database.", e);
         }
+
         int numRows = 4;
         int numColumns = 2;
         int eventsPerPage = numRows * numColumns;
@@ -132,12 +130,9 @@ public class AdminController implements Initializable {
                 gridPane.add(pane, col, row);
             }
         }
-
-
-
-
     }
 
+    // Navigate to the previous page of events
     public void previousPage() {
         if (currentPage > 0) {
             currentPage--;
@@ -145,36 +140,40 @@ public class AdminController implements Initializable {
         }
     }
 
-
+    // Navigate to the next page of events
     public void nextPage() {
         if (currentPage < totalPages - 1) {
             currentPage++;
             refreshEventCards();
         }
     }
+
+    // Initialize the controller and populate the grid pane with event cards
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        currentPage = 1;
+        currentPage = 1;  // Initialization correction, assuming paging starts at index 0
         try {
             populateGridPane();
         } catch (IOException e) {
-//         throw new RuntimeException(e);
+            // Better error handling should be considered
         }
     }
 
-    public void clickLogOut(ActionEvent actionEvent) {try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/Login.fxml"));
-        Parent root = loader.load();
-        Stage stage = new Stage();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+    // Handle logout functionality
+    public void clickLogOut(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/Login.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
 
-        stage.show();
-        ((Stage) logOutButton.getScene().getWindow()).close();
+            stage.show();
+            ((Stage) logOutButton.getScene().getWindow()).close(); // Close the current window
 
-    } catch (IOException e) {
-        throw new RuntimeException(e);
-    }
+        } catch (IOException e) {
+            throw new RuntimeException(e);  // Consider better error handling
+        }
     }
 }
 

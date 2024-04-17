@@ -40,7 +40,7 @@
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton fx:id="logOutButton" buttonType="RAISED" nodeOrientation="RIGHT_TO_LEFT" onAction="#clickLogOut" prefHeight="20.0" prefWidth="87.0" rippleAnimateBackground="false" styleClass="mfx-button" text="Log out" textFill="WHITE">
+                        <MFXButton fx:id="logOutButton" buttonType="RAISED" nodeOrientation="RIGHT_TO_LEFT" onAction="#clickLogOut" prefHeight="29.0" prefWidth="97.0" rippleAnimateBackground="false" styleClass="mfx-button" text="Log out" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>

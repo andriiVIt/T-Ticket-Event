@@ -1,11 +1,12 @@
 package BE;
 
 public class Admin{
-
+    // Fields to store the properties of the Admin class
     private int id;
     private  String username;
     private String password;
 
+    // Constructor to initialize an Admin object with an id, username, and password
     public Admin(int id, String username, String password) {
         this.id = id;
         this.username = username;

@@ -96,8 +96,7 @@ public class CoordinatorController implements Initializable {
             if (coordinator != null) {
                 events = eventModel.getEventsByCoordinator(coordinator);
             } else {
-                // Handle the case when the coordinator is not found
-//                System.out.println("Coordinator not found");
+
                 return;
             }
         } catch (SQLException e) {

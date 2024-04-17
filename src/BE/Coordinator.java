@@ -5,13 +5,13 @@ public class Coordinator {
     private String username;
     private String password;
 
-
+    // Constructor to initialize a Coordinator object with username and password (id not included, possibly auto-generated)
     public Coordinator( String username, String password) {
 
         this.username = username;
         this.password = password;
     }
-
+    // Constructor to initialize a Coordinator object with an id, username, and password
     public Coordinator(int id,String username, String password) {
         this(username, password);
         this.id = id;
@@ -45,4 +45,6 @@ public class Coordinator {
         return username;
     }
 }
+
+
 

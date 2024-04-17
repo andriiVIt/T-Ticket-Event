@@ -3,12 +3,12 @@ package BE;
 public class Customer {private int id;
     private String name;
     private String email;
-
+    // Constructor to initialize a Customer object without an id (useful when id is auto-generated)
     public Customer(String name, String email) {
         this.name = name;
         this.email = email;
     }
-
+    // Constructor to initialize a Customer object with an id, name, and email
     public Customer(int id, String name, String email) {
         this(name, email);
         this.id = id;
